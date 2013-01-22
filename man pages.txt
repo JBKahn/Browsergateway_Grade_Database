@@ -1,0 +1,39 @@
+.TH gradedb 1 "Ortober 6, 2012" "1.0" "gradedb man page"
+.SH NAME
+gradedb \- Store and manage a student database through browser gateway.
+.SH SYNOPSIS
+browsergateway 'sh gradedb'
+.SH DESCRIPTION
+gradedb is a high level shell program for managing and creating a student
+database of student numbers, names, grades and programs in the user's home
+directory. The program allows the user to add new users and edit existing ones.
+.SH FILES
+$HOME/gradedb  Holds the student data using the gradeop file system.
+.SH SEE ALSO
+browsergateway(1), gradeop(5)
+.SH BUGS
+Using an filesystem which does not follow the gradeop file system results
+in error messages being shown in the terminal and the page to display incorrectly.
+
+
+.TH gradeop 5 "Ortober 6, 2012" "1.0" "gradeop man page"
+.SH NAME
+gradeop \- File system for storing student name, number, program and grade.
+.SH DESCRIPTION
+gradeop is a file system for organizing and storing student grades, names,
+programs and grades. The data structure is composed of a parent folder named
+the student's student number and two childen files called info and grade. Grade
+stores the student's final grade. The info file stores the name of the student on
+the first line and the name of their program on the second line.
+.PP
+The grade file must contain only the grade in numeric charcters and the info file must 
+contain the student's name and progrma in alphanumeric characters for the program to
+function properly.
+.SH FILES
+$HOME/gradedb/studentnumber		Holds the student data files and stores the student number.
+$HOME/gradedb/studentnumber/info	Stores the student's name and program.
+$HOME/gradedb/studentnumber/grade	Stores the student's final grade.
+.SH SEE ALSO
+browsergateway(1), gradedb(1)
+
+.BI for bold underline?
